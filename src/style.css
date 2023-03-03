@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&family=Pacifico&display=swap");
+:root {
+  /* font */
+
+  --f-principal: "Gochi Hand", cursive;
+  --f-ttulos: "Pacifico", cursive;
+  --f-parrafos: "Montserrat", sans-serif;
+  /*  font-weight */
+  --fw-300: 400;
+
+  /* colors */
+  --azul-fondo: #6AD0FF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--ff);
+}
+
+main {
+  height: 100vh;
+  background-color: var(--azul-fondo);
+}
+
+.container-img {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-img > img {
+  height: 100%;
+    width: 65%;
+}
