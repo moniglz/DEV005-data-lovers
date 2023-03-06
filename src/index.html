@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
     <main>
-      <section class="container-img">
-        <img src="./img/studio-ghibli.png" alt="imagen-de-studio-ghibli">
-      </section>
-      <section class="cont-categories">
-        <div id="movies">
-          <span>Películas</span>
-        </div>
-        <div id="people">
-          <span>Personajes</span>
-        </div>
-        <div id="location">
-          <span>Lugares</span>
-        </div>
-        <div id="vehicles">
-          <span>Vehículos</span>
-        </div>
-      </section>
+      <div class="container">
+        <section class="container-img">
+          <img
+            src="./img/studio-ghibli-logo.png"
+            alt="imagen-de-studio-ghibli"
+          />
+        </section>
+        <section class="cont-categories">
+          <div id="movies">
+            <span>Películas</span>
+            <div class="bar"></div>
+          </div>
+          <div id="people">
+            <span>Personajes</span>
+            <div class="bar"></div>
+          </div>
+          <div id="location">
+            <span>Lugares</span>
+            <div class="bar"></div>
+          </div>
+          <div id="vehicles">
+            <span>Vehículos</span>
+            <div class="bar"></div>
+          </div>
+        </section>
+      </div>
     </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
