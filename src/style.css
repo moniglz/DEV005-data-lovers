@@ -113,6 +113,9 @@ main {
   width: 100%;
   background: rgba(0, 0, 0, 0.72);
   margin: 0%;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 65px;
 }
 
 #page-movies {
@@ -204,7 +207,7 @@ select {
 }
 
 .content-op {
-  display: inline-flex;
+  display: flex;
   width: 100%;
   height: auto;
   margin-top: 45px;
@@ -215,18 +218,20 @@ select {
 }
 
 .card {
-  min-width: 400px;
-  height: 35vh;
+  max-width: 15vw;
+  min-width: 15vw;
+  max-height: 45vh;
+  min-height: 25vh;
   border-radius: 40px;
-  border: 2pt antiquewhite;
+  border: 1pt antiquewhite;
   border-style: dashed;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card > img {
   width: 100%;
-  height: 60%;
-  
+  height: 100%;
 }
 
 .titles {
