@@ -136,7 +136,7 @@ main {
   margin-top: 2%;
   margin-bottom: 2px;
   font-family: var(--f-parrafos);
-  font-size: 24pt;
+  font-size: 3em;
   font-weight: 600;
   align-content: center;
 }
@@ -218,9 +218,10 @@ select {
 }
 
 .card {
-  width: 15vw;
-  min-height: auto;
-  height: 45vh;
+  max-width: 15vw;
+  min-width: 15vw;
+  max-height: 45vh;
+  min-height: 25vh;
   border-radius: 40px;
   border: 1pt antiquewhite;
   border-style: dashed;
