@@ -136,9 +136,10 @@ main {
   margin-top: 2%;
   margin-bottom: 2px;
   font-family: var(--f-parrafos);
-  font-size: 24pt;
+  font-size: 3em;
   font-weight: 600;
   align-content: center;
+  
 }
 ul {
   list-style-type: none;
