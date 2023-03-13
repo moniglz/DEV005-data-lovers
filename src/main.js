@@ -1,11 +1,14 @@
 //import { getFilms, getPeople } from "./data.js";
+import { dataFilmsSort } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
-const dataGhibli = data.films;
-//console.log(dataGhibli);
+const dataFilms = data.films;
+dataFilmsSort(dataFilms);
+console.log(dataFilms);
+
 const containerCards = document.getElementById("cont-movies");
-dataGhibli.forEach(element => {
-  console.log(element);
+dataFilms.forEach(element => {
+  //console.log(element);
   const divCard = document.createElement("div");
   const imgCard = document.createElement("img");
   const spanCard = document.createElement("span");
@@ -17,3 +20,7 @@ dataGhibli.forEach(element => {
   containerCards.appendChild(divCard);
 });
 
+
+
+/*const search = document.querySelectorAll("#search");
+search.addEventListener("keyup",)*/

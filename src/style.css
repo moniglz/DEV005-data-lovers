@@ -120,7 +120,7 @@ main {
 
 #page-movies {
   display: block;
-  width: 100%;
+  max-width: 100vw;
   height: 100%;
   margin: 0;
   background-image: url(./img/background-movies.jpg);
@@ -240,8 +240,8 @@ select {
 
 #page-people {
   display: block;
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  height: 100%;
   margin: 0;
   background-image: url(./img/background-people.jpg);
   background-repeat: no-repeat;
