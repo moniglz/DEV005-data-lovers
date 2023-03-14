@@ -2,11 +2,19 @@
 import { dataFilmsReverse, dataFilmsSort } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
+const mainMenu = document.querySelector(".menu"),
+  films = document.querySelector("#movies"),
+  containerFilms = document.querySelector(".container-films");
+
+films.addEventListener("click", () => {
+  mainMenu.style.display = "none";
+  containerFilms.style.display = "block";
+});
+
 const dataFilms = data.films;
 createCards(dataFilms);
 
 // Obtener la opcion del select
-
 const filters = document.querySelector("#f-movies");
 filters.addEventListener("change", () => {
   const indexSelect = filters.selectedIndex;
@@ -20,7 +28,6 @@ filters.addEventListener("change", () => {
 });
 
 // hacer funcion para crear tarjetas -> recibe data ordenada
-
 function createCards(dataSort) {
   const containerCards = document.getElementById("cont-movies");
   containerCards.innerHTML = "";
@@ -34,7 +41,6 @@ function createCards(dataSort) {
     containerCards.appendChild(divCard);
   });
 }
-
 
 /*const search = document.querySelectorAll("#search");
 search.addEventListener("keyup",)*/
