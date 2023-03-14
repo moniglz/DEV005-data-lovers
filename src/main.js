@@ -1,19 +1,24 @@
 //import { getFilms, getPeople } from "./data.js";
-import { dataFilmsSort } from "./data.js";
+import { dataFilmsReverse, dataFilmsSort } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const dataFilms = data.films;
-createCards(dataFilms);
+// createCards(dataFilms);
+
 
 // Obtener la opcion del select
 
 const filters = document.querySelector("#f-movies");
 filters.addEventListener("change", () => {
   const indexSelect = filters.selectedIndex;
-  if (indexSelect === 0) {
+  if (indexSelect === 1) {
     const dataOrdenada = dataFilmsSort(dataFilms);
-// remover nodo 
-    createCards(dataOrdenada)
+    // remover nodo
+    // deleteNodo();
+    createCards(dataOrdenada);
+  } else if (indexSelect === 2) {
+    const dataReverse = dataFilmsReverse(dataFilms);
+    createCards(dataReverse);
   }
 });
 
@@ -35,5 +40,11 @@ function createCards(dataSort) {
   });
 }
 
+// function deleteNodo() {
+//   const containerCards = document.getElementById("cont-movies");
+//   const cards = document.querySelectorAll(".card");
+
+//   containerCards.removeChild(cards);
+// }
 /*const search = document.querySelectorAll("#search");
 search.addEventListener("keyup",)*/
