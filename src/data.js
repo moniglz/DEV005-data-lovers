@@ -1,12 +1,3 @@
-// // estas funciones son de ejemplo
-
-// export const example = () => {
-//     return 'example';
-//   };
-
-//   export const anotherExample = () => {
-//     return 'OMG';
-//   };
 
 //Ordenar películas A - Z
 
@@ -22,6 +13,9 @@ export function dataFilmsSort(arr) {
   });
   return arrSort;
 }
+
+//Ordenar películas Z - A
+
 export function dataFilmsReverse(arr) {
   const arrSort = arr.sort((a, b) => {
     if (a.title < b.title) {
