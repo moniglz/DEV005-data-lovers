@@ -262,7 +262,7 @@ height: 65px;
   background-color: azure;
 }
 
-main,
+.container-films,
 .container-people {
   display: none;
 }
