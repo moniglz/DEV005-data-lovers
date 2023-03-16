@@ -1,5 +1,5 @@
 //import { getFilms, getPeople } from "./data.js";
-import { dataFilmsReverse, dataFilmsSort } from "./data.js";
+import { dataFilmsReverse, dataFilmsSort, dataScoreAsc, dataScoreDesc } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const mainMenu = document.querySelector(".menu"),
@@ -24,6 +24,12 @@ filters.addEventListener("change", () => {
   } else if (indexSelect === 2) {
     const dataReverse = dataFilmsReverse(dataFilms);
     createCards(dataReverse);
+  } else if (indexSelect === 3) {
+    const dataScore = dataScoreDesc(dataFilms);
+    createCards(dataScore);
+  } else if (indexSelect === 4) {
+    const dataScoreReverse = dataScoreAsc(dataFilms);
+    createCards(dataScoreReverse);
   }
 });
 
