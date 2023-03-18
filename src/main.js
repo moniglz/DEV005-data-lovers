@@ -1,5 +1,5 @@
 //import { getFilms, getPeople } from "./data.js";
-import { dataFilmsReverse, dataFilmsSort, dataScoreAsc, dataScoreDesc } from "./data.js";
+import { dataFilmsFilter, dataFilmsReverse, dataFilmsSort, dataScoreAsc, dataScoreDesc } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const mainMenu = document.querySelector(".menu"),
@@ -14,10 +14,10 @@ films.addEventListener("click", () => {
 const dataFilms = data.films;
 createCards(dataFilms);
 
-// Obtener la opcion del select
-const filters = document.querySelector("#f-movies");
-filters.addEventListener("change", () => {
-  const indexSelect = filters.selectedIndex;
+// Ordenar
+const order = document.querySelector(".orderMovies");
+order.addEventListener("change", () => {
+  const indexSelect = order.selectedIndex;
   if (indexSelect === 1) {
     const dataOrdenada = dataFilmsSort(dataFilms);
     createCards(dataOrdenada);
@@ -30,6 +30,46 @@ filters.addEventListener("change", () => {
   } else if (indexSelect === 4) {
     const dataScoreReverse = dataScoreAsc(dataFilms);
     createCards(dataScoreReverse);
+  }
+});
+
+// Filtrar
+const arrDirectors = [];
+dataFilms.forEach((element) => {
+  arrDirectors.push(element.director);
+});
+const directors = [...new Set(arrDirectors)];
+
+//agregar opctions al select
+const filter = document.querySelector(".filterDirectors");
+directors.forEach((element) => {
+  const optionDirector = document.createElement("option");
+  optionDirector.value = element;
+  optionDirector.innerHTML = element;
+  filter.appendChild(optionDirector);
+});
+
+filter.addEventListener("change", () => {
+  const indexSelect = filter.selectedIndex;
+  const director = filter.value;
+  if (indexSelect === 1) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 2) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 3) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 4) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 5) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 6) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
   }
 });
 
