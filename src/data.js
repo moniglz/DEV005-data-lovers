@@ -26,6 +26,7 @@ export function dataFilmsReverse(arr) {
   return arrSort;
 }
 
+
 //Ordenar de mayor a menor puntuación(rating)
 export function dataScoreDesc(arr) {
   const arrSort = arr.sort((a, b) => {
@@ -38,7 +39,7 @@ export function dataScoreDesc(arr) {
     return 0;
   });
   return(arrSort);
-};
+}
 
 //Ordenar de menor a mayor puntuación(rating)
 export function dataScoreAsc(arr) {
@@ -52,4 +53,12 @@ export function dataScoreAsc(arr) {
     return 0
   });
   return(arrSort);
+}
+
+
+// Filtrar peliulas por director
+
+export function dataFilmsFilter(films, director) {
+  const arrFilter = films.filter((el) => el.director === director);
+  return arrFilter;
 }
