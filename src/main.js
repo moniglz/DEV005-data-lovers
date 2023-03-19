@@ -74,7 +74,7 @@ filter.addEventListener("change", () => {
 });
 
 // hacer funcion para crear tarjetas -> recibe data ordenada
-function createCards(dataSort) {
+function createCards(dataSort){
   const containerCards = document.getElementById("cont-movies");
   containerCards.innerHTML = "";
   dataSort.forEach((element) => {
@@ -87,6 +87,26 @@ function createCards(dataSort) {
     containerCards.appendChild(divCard);
   });
 }
+
+
+const movieInfo = document.getElementById(dataFilms);
+
+movieInfo.addEventListener("click", () => {
+  const contModal = document.getElementById("modal-movies");
+  containerModal.innerHTML = "";
+  dataFilms.forEach((element) => {
+    const divModal = document.createElement("div");
+    divModal.innerHTML = `
+    <img src="${element.poster}">
+    <span>"${element.title}"</span>
+    <span>"${element.release_date}
+    <p>"${element.description}"</p>
+    `;
+    contModal.appendChild(divModal);
+    });
+});
+
+
 
 /*const search = document.querySelectorAll("#search");
 search.addEventListener("keyup",)*/

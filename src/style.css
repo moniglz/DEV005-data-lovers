@@ -284,6 +284,48 @@ select {
   display: none;
 }
 
+
+
+
+.modal{
+  display: flex;
+  justify-content: center;
+  max-width: 750px;
+  min-width: 450px;
+  height: 35%;
+  border: dashed #9786f8;
+  border-radius: 55px;
+}
+
+#cont-modal-img {
+  width: 40%;
+  height: 100%;
+  /* border: solid sandybrown; */
+  border-color: #fafaff;
+  border-radius: 55px 0 0 55px;
+  overflow: hidden;
+}
+
+.modal img {
+  width: 100%;
+  height: 100%;  
+}
+
+#cont-modal-txt {
+  justify-self: center;
+  width: 60%;
+  max-height: 550px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  border-radius: 0 55px 55px 0;
+}
+
+
+
+
+
+
 @media (min-width: 320px) and (max-width: 480px) {
   main {
     height: 100vh;
