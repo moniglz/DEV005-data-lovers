@@ -9,7 +9,7 @@
   --fw-300: 400;
 
   /* colors */
-  --color-movies: #0085c2;
+  --color-movies: #566EAE;
   --color-people: #541b35;
   --color-location: #f05231;
   --color-vehicles: #91c271;
@@ -84,36 +84,6 @@ main {
   width: 400px;
   height: 16px;
 }
-/* #movies > .bar {
-  background-color: var(--color-movies);
-}
-#people > .bar {
-  background-color: var(--color-people);
-}
-#location > .bar {
-  background-color: var(--color-location);
-}
-#vehicles > .bar {
-  background-color: var(--color-vehicles);
-} */
-#movies span {
-  position: relative;
-}
-#movies span::after {
-  content: "";
-  background-color: var(--color-movies);
-  position: absolute;
-  left: 0;
-  top: calc(100% + 4px);
-  width: 100%;
-  height: 10px;
-  opacity: 0;
-}
-
-#movies span.selected::after,
-#movies span:hover::after {
-  opacity: 0.8;
-}
 
 .pages {
   display: flex;
@@ -123,6 +93,7 @@ main {
   margin: 0;
   top: 0;
   background-color: #e6ebea;
+  position: relative;
 }
 
 .container-pages {
@@ -191,19 +162,19 @@ li {
 }
 
 .search-filter {
-  display: inline-flex;
+  display: flex;
   width: 100%;
-  height: 7vh;
+  height: 50px;
   margin-top: 8px;
   margin-bottom: 7px;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
   align-content: center;
+  gap: 30px;
 }
 #search {
-  width: 38%;
-  height: 90%;
+  width: 600px;
+  height: 50px;
+
   padding-right: 30px;
   padding: 2px 10px;
   border: none;
@@ -213,9 +184,10 @@ li {
 }
 select {
   display: flex;
-  height: 4vh;
-  margin-top: 8px;
-  margin-left: 35px;
+  height: 100%;
+  width: 150px;
+  /* margin-top: 8px;
+  margin-left: 35px; */
   border: none;
   border-radius: 15px;
   font-family: var(--f-parrafos);
@@ -279,14 +251,139 @@ select {
   background-color: azure;
 }
 
-.container-films,
-.container-people {
+/* menu mobile */
+.menu-mobile {
+  width: 100%;
+  height: 80px;
+  background: var(--color-movies);
+  display: flex;
+  justify-content: space-between;
+}
+.logo-mobile {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-mobile > img {
+  width: 153px;
+  height: 68px;
+}
+
+.logo-hamburger {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-hamburger > img {
+  width: 40px;
+  color: #e6ebea;
+}
+
+.menu-mobile-items {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #566daedc;
+  transform: translate(0, -130%);
+}
+.menu-mobile-items.is-active {
+    transform: translate(0, 0);
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 34px;
+  font-size: 2.4rem;
+}
+.menu-item {
+  text-decoration: none;
+  color: #e6ebea;
+  position: relative;
+}
+
+
+
+
+
+.movies::after {
+  content: "";
+background-color: var(--color-movies);
+width: 0;
+height: 4px;
+position: absolute;
+top: 50px;
+right: 50%;
+transition: all .5s;
+will-change: width;
+}
+.people::after {
+  content: "";
+background-color: var(--color-people);
+width: 0;
+height: 4px;
+position: absolute;
+top: 50px;
+right: 50%;
+transition: all .5s;
+will-change: width;
+}
+.location::after {
+  content: "";
+background-color: var(--color-location);
+width: 0;
+height: 4px;
+position: absolute;
+top: 50px;
+right: 50%;
+transition: all .5s;
+will-change: width;
+}
+.vehicles::after {
+  content: "";
+background-color: var(--color-vehicles);
+width: 0;
+height: 4px;
+position: absolute;
+top: 50px;
+right: 50%;
+transition: all .5s;
+will-change: width;
+}
+
+.menu-item:hover::after{
+  width: 100%;
+  right: 0;
+}
+
+
+.container-films, .container-people, .menu-mobile, .menu-mobile-items{
   display: none;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .menu-mobile, .menu-mobile-items{
+    display: flex;
+  }
   main {
     height: 100vh;
+  }
+  #nav-bar {
+    display: none;
+  }
+  .banner-logo {
+    display: none;
   }
   .container {
     flex-direction: column;
@@ -310,4 +407,17 @@ select {
     text-align: center;
     padding: 0;
   }
+  #search {
+    width: auto;
+  }
+  .search-filter {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40px;
+  }
+  select {
+    width: 100%;
+    height: 35px;
+  }
 }
+
