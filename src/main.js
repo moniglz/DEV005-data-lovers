@@ -6,6 +6,13 @@ import {
   dataScoreAsc,
   dataScoreDesc,
 } from "./data.js";
+import {
+  dataFilmsFilter,
+  dataFilmsReverse,
+  dataFilmsSort,
+  dataScoreAsc,
+  dataScoreDesc,
+} from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const mainMenu = document.querySelector(".menu"),
