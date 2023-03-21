@@ -26,7 +26,6 @@ export function dataFilmsReverse(arr) {
   return arrSort;
 }
 
-
 //Ordenar de mayor a menor puntuación(rating)
 export function dataScoreDesc(arr) {
   const arrSort = arr.sort((a, b) => {
@@ -54,7 +53,6 @@ export function dataScoreAsc(arr) {
   });
   return(arrSort);
 }
-
 
 // Filtrar peliulas por director
 
