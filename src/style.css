@@ -291,7 +291,11 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-movies);
+  background-color: #566daedc;
+  transform: translate(0, -130%);
+}
+.menu-mobile-items.is-active {
+    transform: translate(0, 0);
 }
 
 .menu-items {
@@ -306,6 +310,10 @@ select {
   color: #e6ebea;
   position: relative;
 }
+
+
+
+
 
 .movies::after {
   content: "";

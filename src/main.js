@@ -1,5 +1,11 @@
 //import { getFilms, getPeople } from "./data.js";
-import { dataFilmsFilter, dataFilmsReverse, dataFilmsSort, dataScoreAsc, dataScoreDesc } from "./data.js";
+import {
+  dataFilmsFilter,
+  dataFilmsReverse,
+  dataFilmsSort,
+  dataScoreAsc,
+  dataScoreDesc,
+} from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const mainMenu = document.querySelector(".menu"),
@@ -90,3 +96,13 @@ function createCards(dataSort) {
 
 /*const search = document.querySelectorAll("#search");
 search.addEventListener("keyup",)*/
+
+// mostrar menu mobile
+
+const btnMenu = document.querySelector(".logo-hamburger"),
+  menu = document.querySelector(".menu-mobile-items");
+
+btnMenu.addEventListener("click", (e) => {
+  btnMenu.classList.toggle("is-active");
+  menu.classList.toggle("is-active");
+});
