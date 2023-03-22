@@ -236,6 +236,14 @@ select {
   height: 65px;
 }
 
+.card p {
+  margin-top: 5px;
+  font-family: var(--f-parrafos);
+  font-size: 1.8em;
+  text-align: center;
+  color: #ffffff;
+}
+
 .titles {
   display: flex;
 }
