@@ -89,6 +89,7 @@ function createCards(dataSort) {
     divCard.innerHTML = `
     <img src="${element.poster}">
     <span>${element.title}</span>
+    <p>${element.release_date}</p>
     `;
     containerCards.appendChild(divCard);
   });
