@@ -1,6 +1,6 @@
 //import { getFilms, getPeople } from "./data.js";
 import {
-  dataFilmsFilter,
+  // dataFilmsFilter,
   dataFilmsReverse,
   dataFilmsSort,
   dataScoreAsc,
@@ -44,40 +44,40 @@ const arrDirectors = [];
 dataFilms.forEach((element) => {
   arrDirectors.push(element.director);
 });
-const directors = [...new Set(arrDirectors)];
+// const directors = [...new Set(arrDirectors)];
 
 //agregar opctions al select
-const filter = document.querySelector(".filterDirectors");
-directors.forEach((element) => {
-  const optionDirector = document.createElement("option");
-  optionDirector.value = element;
-  optionDirector.innerHTML = element;
-  filter.appendChild(optionDirector);
-});
+// const filter = document.querySelector(".filterDirectors");
+// directors.forEach((element) => {
+//   const optionDirector = document.createElement("option");
+//   optionDirector.value = element;
+//   optionDirector.innerHTML = element;
+//   filter.appendChild(optionDirector);
+// });
 
-filter.addEventListener("change", () => {
-  const indexSelect = filter.selectedIndex;
-  const director = filter.value;
-  if (indexSelect === 1) {
-    const dataFilter = dataFilmsFilter(dataFilms, director);
-    createCards(dataFilter);
-  } else if (indexSelect === 2) {
-    const dataFilter = dataFilmsFilter(dataFilms, director);
-    createCards(dataFilter);
-  } else if (indexSelect === 3) {
-    const dataFilter = dataFilmsFilter(dataFilms, director);
-    createCards(dataFilter);
-  } else if (indexSelect === 4) {
-    const dataFilter = dataFilmsFilter(dataFilms, director);
-    createCards(dataFilter);
-  } else if (indexSelect === 5) {
-    const dataFilter = dataFilmsFilter(dataFilms, director);
-    createCards(dataFilter);
-  } else if (indexSelect === 6) {
-    const dataFilter = dataFilmsFilter(dataFilms, director);
-    createCards(dataFilter);
-  }
-});
+// filter.addEventListener("change", () => {
+//   const indexSelect = filter.selectedIndex;
+//   const director = filter.value;
+//   if (indexSelect === 1) {
+//     const dataFilter = dataFilmsFilter(dataFilms, director);
+//     createCards(dataFilter);
+//   } else if (indexSelect === 2) {
+//     const dataFilter = dataFilmsFilter(dataFilms, director);
+//     createCards(dataFilter);
+//   } else if (indexSelect === 3) {
+//     const dataFilter = dataFilmsFilter(dataFilms, director);
+//     createCards(dataFilter);
+//   } else if (indexSelect === 4) {
+//     const dataFilter = dataFilmsFilter(dataFilms, director);
+//     createCards(dataFilter);
+//   } else if (indexSelect === 5) {
+//     const dataFilter = dataFilmsFilter(dataFilms, director);
+//     createCards(dataFilter);
+//   } else if (indexSelect === 6) {
+//     const dataFilter = dataFilmsFilter(dataFilms, director);
+//     createCards(dataFilter);
+//   }
+// });
 
 // hacer funcion para crear tarjetas -> recibe data ordenada
 function createCards(dataSort) {
@@ -89,7 +89,6 @@ function createCards(dataSort) {
     divCard.innerHTML = `
     <img src="${element.poster}">
     <span>${element.title}</span>
-    <p>${element.release_date}</p>
     `;
     containerCards.appendChild(divCard);
   });
@@ -103,49 +102,20 @@ search.addEventListener("keyup",)*/
 const btnMenu = document.querySelector(".logo-hamburger"),
   menu = document.querySelector(".menu-mobile-items");
 
-btnMenu.addEventListener("click", (e) => {
+btnMenu.addEventListener("click", () => {
   btnMenu.classList.toggle("is-active");
   menu.classList.toggle("is-active");
 });
 
-
-
-
-
-// //Modal con info
-// const movieInfo = document.querySelectorAll(".card");
-// const containerModal = document.querySelector(".container-modal");
-// movieInfo.forEach(element => {
-//   //se da click a la tarjeta
-//   element.addEventListener("click", () => {
-//   console.log("hola");
-//   containerModal.style.display = "block";
-//   const posterImg = document.querySelector(".poster");
-//   posterImg.src = `${element.poster}`;
-//   });
-// });
-
-
-// const contModal = document.getElementById("modal-movies");
-// contModal.innerHTML = "";
-// dataFilms.forEach((element) => {
-//   const divModal = document.createElement("div");
-//   const imgModal = document.createElement("img");
-//   imgModal.src = `${element.poster}`;
-//   divModal.appendChild(imgModal);
-//   const textModal = document.createElement("div");
-//   textModal.innerHTML = `
-//   <h1>"${element.title}"</h1>
-//   <span>"${element.release_date}</span>
-//   <p>"${element.description}"</p>
-//   `;
-//   contModal.appendChild(textModal);
-//   contModal.appendChild(divModal);
-
-
-
-
-
-
-
-
+//Modal con info
+const movieInfo = document.querySelectorAll(".card");
+const containerModal = document.querySelector(".container-modal");
+movieInfo.forEach((element) => {
+  //se da click a la tarjeta
+  element.addEventListener("click", () => {
+    console.log("hola");
+    containerModal.style.display = "block";
+    const poster = document.querySelector(".poster");
+    poster.src = `${element.poster}`;
+  });
+});

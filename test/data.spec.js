@@ -1,73 +1,94 @@
-import { example, anotherExample, dataFilmsSort } from '../src/data.js';
+import { dataFilmsReverse, dataScoreAsc } from "../src/data.js";
 
-const sampleData = [
+const dataTitles = [
   {
-    "title": "Castle in the Sky",
-    "director": "Hayao Miyazaki",
-    "release_date": "1986",
-    "rt_score": "95",
+    title: "Castle in the Sky",
   },
   {
-    "title": "My Neighbor Totoro",
-    "director": "Hayao Miyazaki",
-    "release_date": "1988",
-    "rt_score": "93",
+    title: "My Neighbor Totoro",
   },
   {
-    "title": "The Secret World of Arrietty",
-    "director": "Hiromasa Yonebayashi",
-    "release_date": "2010",
-    "rt_score": "95",
+    title: "My Neighbor Totoro",
   },
-]
+  {
+    title: "Kiki's Delivery Service",
+  },
+  {
+    title: "Princess Mononoke",
+  },
+];
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+const dataScore = [
+  {
+    rt_score: "92",
+  },
+  {
+    rt_score: "95",
+  },
+  {
+    rt_score: "83",
+  },
+  {
+    rt_score: "89",
+  },
+  {
+    rt_score: "100",
+  },
+  {
+    rt_score: "92",
+  },
+];
+
+describe("Función que ordena de Z-A", () => {
+  it("Debería se una funcion", () => {
+    expect(typeof dataFilmsReverse).toBe("function");
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-
-
-describe('dataFilmsSort', () => {
-  it('is a function', () => {
-    expect(typeof dataFilmsSort).toBe('function');
-  });
-
-  it('returns films from A to Z', () => {
-    const AtoZOrder = [
+  it("Debería retornar el array ordenado de Z-A", () => {
+    const resultGhibliZA = [
       {
-        "title": "Castle in the Sky",
-        "director": "Hayao Miyazaki",
-        "release_date": "1986",
-        "rt_score": "95",
+        title: "Princess Mononoke",
       },
       {
-        "title": "My Neighbor Totoro",
-        "director": "Hayao Miyazaki",
-        "release_date": "1988",
-        "rt_score": "93",
+        title: "My Neighbor Totoro",
       },
       {
-        "title": "The Secret World of Arrietty",
-        "director": "Hiromasa Yonebayashi",
-        "release_date": "2010",
-        "rt_score": "95",
-      },   
-    ]
-    expect(dataFilmsSort(sampleData, 'title')).toEqual(AtoZOrder);
+        title: "My Neighbor Totoro",
+      },
+      {
+        title: "Kiki's Delivery Service",
+      },
+      {
+        title: "Castle in the Sky",
+      },
+    ];
+    expect(dataFilmsReverse(dataTitles)).toEqual(resultGhibliZA);
+  });
+});
+describe("Función que ordena peliculas de menor a mayor puntuación(rating)", () => {
+  it("Debería se una funcion", () => {
+    expect(typeof dataScoreAsc).toBe("function");
+  });
+  it("Debería retornar el array ordenado de 83-100", () => {
+    const resultGhibliSCore = [
+      {
+        rt_score: "83",
+      },
+      {
+        rt_score: "89",
+      },
+      {
+        rt_score: "92",
+      },
+      {
+        rt_score: "92",
+      },
+      {
+        rt_score: "95",
+      },
+      {
+        rt_score: "100",
+      },
+    ];
+    expect(dataScoreAsc(dataScore)).toEqual(resultGhibliSCore);
   });
 });
