@@ -6,13 +6,6 @@ import {
   dataScoreAsc,
   dataScoreDesc,
 } from "./data.js";
-import {
-  dataFilmsFilter,
-  dataFilmsReverse,
-  dataFilmsSort,
-  dataScoreAsc,
-  dataScoreDesc,
-} from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const mainMenu = document.querySelector(".menu"),
@@ -96,6 +89,7 @@ function createCards(dataSort) {
     divCard.innerHTML = `
     <img src="${element.poster}">
     <span>${element.title}</span>
+    <p>${element.release_date}</p>
     `;
     containerCards.appendChild(divCard);
   });
@@ -116,35 +110,37 @@ btnMenu.addEventListener("click", (e) => {
 
 
 
-//Modal con info
-const movieInfo = document.querySelectorAll(".card");
-const containerModal = document.querySelector(".container-modal");
-movieInfo.forEach(element => {
-  //se da click a la tarjeta
-  element.addEventListener("click", () => { 
-  console.log("hola");
-  containerModal.style.display = "block";
-  const poster = document.querySelector(".poster");
-  poster.src = `${element.poster}`;
-  });
-});
 
 
-  // const contModal = document.getElementById("modal-movies");
-  // contModal.innerHTML = "";
-  // dataFilms.forEach((element) => {
-  //   const divModal = document.createElement("div");
-  //   const imgModal = document.createElement("img");
-  //   imgModal.src = `${element.poster}`;
-  //   divModal.appendChild(imgModal);
-  //   const textModal = document.createElement("div");
-  //   textModal.innerHTML = `
-  //   <h1>"${element.title}"</h1>
-  //   <span>"${element.release_date}</span>
-  //   <p>"${element.description}"</p>
-  //   `;
-  //   contModal.appendChild(textModal);
-  //   contModal.appendChild(divModal);
+// //Modal con info
+// const movieInfo = document.querySelectorAll(".card");
+// const containerModal = document.querySelector(".container-modal");
+// movieInfo.forEach(element => {
+//   //se da click a la tarjeta
+//   element.addEventListener("click", () => {
+//   console.log("hola");
+//   containerModal.style.display = "block";
+//   const posterImg = document.querySelector(".poster");
+//   posterImg.src = `${element.poster}`;
+//   });
+// });
+
+
+// const contModal = document.getElementById("modal-movies");
+// contModal.innerHTML = "";
+// dataFilms.forEach((element) => {
+//   const divModal = document.createElement("div");
+//   const imgModal = document.createElement("img");
+//   imgModal.src = `${element.poster}`;
+//   divModal.appendChild(imgModal);
+//   const textModal = document.createElement("div");
+//   textModal.innerHTML = `
+//   <h1>"${element.title}"</h1>
+//   <span>"${element.release_date}</span>
+//   <p>"${element.description}"</p>
+//   `;
+//   contModal.appendChild(textModal);
+//   contModal.appendChild(divModal);
 
 
 
