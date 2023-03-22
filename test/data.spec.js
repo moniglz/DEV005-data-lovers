@@ -1,4 +1,4 @@
-import { dataFilmsReverse,  } from "../src/data.js";
+import { dataFilmsReverse, dataScoreAsc } from "../src/data.js";
 
 const dataTitles = [
   {
@@ -15,6 +15,27 @@ const dataTitles = [
   },
   {
     title: "Princess Mononoke",
+  },
+];
+
+const dataScore = [
+  {
+    rt_score: "92",
+  },
+  {
+    rt_score: "95",
+  },
+  {
+    rt_score: "83",
+  },
+  {
+    rt_score: "89",
+  },
+  {
+    rt_score: "100",
+  },
+  {
+    rt_score: "92",
   },
 ];
 
@@ -41,5 +62,33 @@ describe("Función que ordena de Z-A", () => {
       },
     ];
     expect(dataFilmsReverse(dataTitles)).toEqual(resultGhibliZA);
+  });
+});
+describe("Función que ordena peliculas de menor a mayor puntuación(rating)", () => {
+  it("Debería se una funcion", () => {
+    expect(typeof dataScoreAsc).toBe("function");
+  });
+  it("Debería retornar el array ordenado de 83-100", () => {
+    const resultGhibliSCore = [
+      {
+        rt_score: "83",
+      },
+      {
+        rt_score: "89",
+      },
+      {
+        rt_score: "92",
+      },
+      {
+        rt_score: "92",
+      },
+      {
+        rt_score: "95",
+      },
+      {
+        rt_score: "100",
+      },
+    ];
+    expect(dataScoreAsc(dataScore)).toEqual(resultGhibliSCore);
   });
 });
