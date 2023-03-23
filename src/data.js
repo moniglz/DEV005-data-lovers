@@ -15,9 +15,9 @@ export function dataFilmsSort(arr) {
 //Ordenar películas Z - A
 export function dataFilmsReverse(arr) {
   const arrSort = arr.sort((a, b) => {
-    if (a.title < b.title) {
-      return 1;
-    }
+    // if (a.title < b.title) {
+    //   return 1;
+    // }
     if (a.title > b.title) {
       return -1;
     }
@@ -43,9 +43,9 @@ export function dataScoreDesc(arr) {
 //Ordenar de menor a mayor puntuación(rating)
 export function dataScoreAsc(arr) {
   const arrSort = arr.sort((a, b) => {
-    if (parseInt(a.rt_score) > parseInt(b.rt_score)) {
-      return 1;
-    }
+    // if (parseInt(a.rt_score) > parseInt(b.rt_score)) {
+    //   return 1;
+    // }
     if (parseInt(a.rt_score) < parseInt(b.rt_score)) {
       return -1;
     }
