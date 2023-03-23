@@ -1,6 +1,6 @@
 //import { getFilms, getPeople } from "./data.js";
 import {
-  // dataFilmsFilter,
+  dataFilmsFilter,
   dataFilmsReverse,
   dataFilmsSort,
   dataScoreAsc,
@@ -36,6 +36,9 @@ order.addEventListener("change", () => {
   } else if (indexSelect === 4) {
     const dataScoreReverse = dataScoreAsc(dataFilms);
     createCards(dataScoreReverse);
+  } else if (indexSelect === 5) {
+    const dataScoreReverse = dataScoreAsc(dataFilms);
+    createCards(dataScoreReverse);
   }
 });
 
@@ -44,40 +47,45 @@ const arrDirectors = [];
 dataFilms.forEach((element) => {
   arrDirectors.push(element.director);
 });
-// const directors = [...new Set(arrDirectors)];
+
+const uniqueDirectors = arrDirectors.filter((value, index) => {
+  return arrDirectors.indexOf(value) === index;
+});
+
+
 
 //agregar opctions al select
-// const filter = document.querySelector(".filterDirectors");
-// directors.forEach((element) => {
-//   const optionDirector = document.createElement("option");
-//   optionDirector.value = element;
-//   optionDirector.innerHTML = element;
-//   filter.appendChild(optionDirector);
-// });
+const filter = document.querySelector(".filterDirectors");
+uniqueDirectors.forEach((element) => {
+  const optionDirector = document.createElement("option");
+  optionDirector.value = element;
+  optionDirector.innerHTML = element;
+  filter.appendChild(optionDirector);
+});
 
-// filter.addEventListener("change", () => {
-//   const indexSelect = filter.selectedIndex;
-//   const director = filter.value;
-//   if (indexSelect === 1) {
-//     const dataFilter = dataFilmsFilter(dataFilms, director);
-//     createCards(dataFilter);
-//   } else if (indexSelect === 2) {
-//     const dataFilter = dataFilmsFilter(dataFilms, director);
-//     createCards(dataFilter);
-//   } else if (indexSelect === 3) {
-//     const dataFilter = dataFilmsFilter(dataFilms, director);
-//     createCards(dataFilter);
-//   } else if (indexSelect === 4) {
-//     const dataFilter = dataFilmsFilter(dataFilms, director);
-//     createCards(dataFilter);
-//   } else if (indexSelect === 5) {
-//     const dataFilter = dataFilmsFilter(dataFilms, director);
-//     createCards(dataFilter);
-//   } else if (indexSelect === 6) {
-//     const dataFilter = dataFilmsFilter(dataFilms, director);
-//     createCards(dataFilter);
-//   }
-// });
+filter.addEventListener("change", () => {
+  const indexSelect = filter.selectedIndex;
+  const director = filter.value;
+  if (indexSelect === 1) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 2) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 3) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 4) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 5) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  } else if (indexSelect === 6) {
+    const dataFilter = dataFilmsFilter(dataFilms, director);
+    createCards(dataFilter);
+  }
+});
 
 // hacer funcion para crear tarjetas -> recibe data ordenada
 function createCards(dataSort) {

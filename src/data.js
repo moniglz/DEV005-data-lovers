@@ -54,6 +54,11 @@ export function dataScoreAsc(arr) {
   return(arrSort);
 }
 
+
+
+
+
+
 // Filtrar peliulas por director
 
 export function dataFilmsFilter(films, director) {
