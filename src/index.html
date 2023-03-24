@@ -65,7 +65,7 @@
             <img src="./img/studio-ghibli-logo.png" alt="logo-studio-ghibli" />
           </div>
           <section class="search-filter">
-            <input type="search" class="search" id="search" />
+            <!-- <input type="search" class="search" id="search" /> -->
             <select name="filter" class="orderMovies" id="f-movies">
               <option selected value="ordenar">Ordenar por</option>
               <option value="a-z">A - Z</option>
@@ -82,25 +82,38 @@
 
           <section class="content-op" id="cont-movies"></section>
 
-          <!-- Modal with the movies info -->
-          <section class="container-modal">
-            <section class="modal" id="modal-movies">
-              <div id="cont-modal-img">
-                <img
-                  class="poster"
-                  src="https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg"
-                />
-              </div>
-              <div id="cont-modal-txt">
-                <h1>Lorem ipsum dolor sit</h1>
-                <p>
-                  amet, consectetur adipisicing elit. Suscipit nemo nostrum
-                  quibusdam voluptatibus. Debitis, corporis.
-                </p>
-              </div>
-            </section>
-          </section>
+          
+
         </div>
+
+<!-- Modal with the movies info -->
+<section class="container-modal">
+  <div class="cont-button">
+    <button class="close-modal">✕</button>
+  </div>
+  <section class="modal" id="modal-movies">
+    <div id="cont-modal-img">
+      <img
+        class="poster-img"
+        src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg"
+      />
+    </div>
+    <div id="cont-modal-txt">
+      <h1>My Neighbor Totoro</h1>
+      <h2>(1988)</h2>
+      <h3>Director: Hayao Miyazaki</h3>
+      <p>
+        Two sisters move to the country with their father in order to be closer to their hospitalized mother, 
+        and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. 
+        When the youngest runs away from home, the older sister seeks help from the spirits to find her.
+      </p>
+      <h4>Rating: 93</h4>
+      
+    </div>
+  </section>
+</section>
+
+
       </section>
     </section>
 

@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&family=Mali&display=swap");
 :root {
   /* font */
 
   --f-principal: "Gochi Hand", cursive;
-  --f-titulos: "Pacifico", cursive;
+  --f-titulos: "Mali", cursive;
   --f-parrafos: "Montserrat", sans-serif;
   /*  font-weight */
   --fw-300: 400;
@@ -444,43 +444,83 @@ will-change: width;
   background: rgba(217, 217, 217, 0.046);
   backdrop-filter: blur(6.57067px);
   background-size: contain;
+  display: none;
 }
 
 .modal {
   display: flex;
-  justify-content: center;
-  max-width: 750px;
+  max-width: 60%;
   min-width: 450px;
-  max-height: 55%;
-  border: dashed #9786f8;
+  max-height: 70%;
+  min-height: auto;
+  /* border: dashed #9786f8; */
   border-radius: 55px;
 }
-
+.cont-button {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  max-width: 60%;
+  min-width: 450px;
+}
+.close-modal {
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 900;
+  background: none;
+  border: none;
+  cursor: pointer;  
+}
 #cont-modal-img {
-  width: 40%;
-  height: 100%;
+  width: 35%;
+  max-height: 100%;
   /* border: solid sandybrown; */
   border-color: #fafaff;
   border-radius: 55px 0 0 55px;
   overflow: hidden;
 }
-
 .modal img {
   width: 100%;
   height: 100%;  
 }
 
 #cont-modal-txt {
-  justify-self: center;
-  width: 60%;
-  max-height: 55%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  width: 65%;
+  max-height: 95%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 2.2%;
+  padding-left: 1.5%;
+  padding-right: 2%;
+  padding-bottom: 2%;
   background-color: #ffffff;
   border-radius: 0 55px 55px 0;
 }
-
-
-.container-modal {
-  display: none;
+h1 {
+  font-family: var(--f-principal);
+  font-size: 5em;
+  text-align: left;
+}
+h2, h3, h4 {
+  font-family: var(--f-titulos);
+}
+h2 {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  padding-bottom: 1px;
+}
+h3, h4 {
+  font-size: 1.7em;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+p {
+  font-family: var(--f-parrafos);
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
