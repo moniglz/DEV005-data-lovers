@@ -111,20 +111,29 @@ search.addEventListener("keyup",)*/
 const btnMenu = document.querySelector(".logo-hamburger"),
   menu = document.querySelector(".menu-mobile-items");
 
-btnMenu.addEventListener("click", () => {
-  btnMenu.classList.toggle("is-active");
-  menu.classList.toggle("is-active");
-});
+// btnMenu.addEventListener("click", () => {
+//   btnMenu.classList.toggle("is-active");
+//   menu.classList.toggle("is-active");
+// });
 
 //Modal con info
+
 const movieInfo = document.querySelectorAll(".card");
 const containerModal = document.querySelector(".container-modal");
 movieInfo.forEach((element) => {
   //se da click a la tarjeta
-  element.addEventListener("click", () => {
-    console.log("hola");
+  element.addEventListener("click", (e) => {
+    
+    if(!e.target.classList.contains("card")){
+      const movie = e.target.parentElement;
+      console.log(movie.firstChild)
+    }
     containerModal.style.display = "block";
-    const poster = document.querySelector(".poster");
-    poster.src = `${element.poster}`;
+    const posterImg = document.querySelector(".poster-img");
+    posterImg.src = `${element.poster}`;
   });
+  const closeModal = document.querySelector(".close-modal");
+  closeModal.addEventListener("click", () => {
+    containerModal.style.display = "none";
+  })
 });
