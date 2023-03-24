@@ -123,7 +123,8 @@ const containerModal = document.querySelector(".container-modal");
 movieInfo.forEach((element) => {
   //se da click a la tarjeta
   element.addEventListener("click", (e) => {
-      if(!e.target.classList.contains("card")){
+    
+    if(!e.target.classList.contains("card")){
       const movie = e.target.parentElement;
       console.log(movie.firstChild)
     }
