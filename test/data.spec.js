@@ -1,4 +1,4 @@
-import { dataFilmsSort, dataFilmsReverse, dataScoreDesc, dataScoreAsc, dataFilmsFilter } from "../src/data.js";
+import { dataFilmsSort, dataFilmsReverse, dataScoreDesc, dataScoreAsc, dataFilmsFilter, dataYearDesc, dataYearAsc } from "../src/data.js";
 
 const dataSampleGhibli = [
   {
@@ -113,7 +113,6 @@ describe("Función que ordena de Z-A", () => {
     expect(dataFilmsReverse(dataSampleGhibli)).toEqual(resultGhibliZA);
   });
 });
-
 describe("Función que ordena peliculas de mayor a menor puntuación(rating)", () => {
   it("Debería se una funcion", () => {
     expect(typeof dataScoreDesc).toBe("function");
@@ -195,12 +194,92 @@ describe("Función que ordena peliculas de menor a mayor puntuación(rating)", (
     expect(dataScoreAsc(dataSampleGhibli)).toEqual(resultGhibliSCore);
   });
 });
+describe("Función que ordena peliculas de menor a mayor año", () => {
+  it("Debería se una funcion", () => {
+    expect(typeof dataYearDesc).toBe("function");
+  });
+  it("Debería retornar el array ordenado de 1986-1997", () => {
+    const resultGhibliYear = [
+      {
+        title: "Castle in the Sky",
+        director: "Hayao Miyazaki",
+        release_date: "1986",
+        rt_score: "95",
+      },
+      {
+        title: "My Neighbor Totoro",
+        director: "Hayao Miyazaki",
+        release_date: "1988",
+        rt_score: "93",
+      },
+      {
+        title: "My Neighbor Totoro",
+        director: "Hayao Miyazaki",
+        release_date: "1988",
+        rt_score: "93",
+      },
+      {
+        title: "Whisper of the Heart",
+        director: "Yoshifumi Kondō",
+        release_date: "1995",
+        rt_score: "91",
+      },
+      {
+        title: "Princess Mononoke",
+        director: "Hiroyuki Morita",
+        release_date: "1997",
+        rt_score: "92",
+      },
+    ];
+    expect(dataYearDesc(dataSampleGhibli)).toEqual(resultGhibliYear);
+  });
+});
+describe("Función que ordena peliculas de mayor a menor año", () => {
+  it("Debería se una funcion", () => {
+    expect(typeof dataYearAsc).toBe("function");
+  });
+  it("Debería retornar el array ordenado de 1997-1986", () => {
+    const resultGhibliYear = [
+      {
+        title: "Princess Mononoke",
+        director: "Hiroyuki Morita",
+        release_date: "1997",
+        rt_score: "92",
+      },
+      {
+        title: "Whisper of the Heart",
+        director: "Yoshifumi Kondō",
+        release_date: "1995",
+        rt_score: "91",
+      },
+      {
+        title: "My Neighbor Totoro",
+        director: "Hayao Miyazaki",
+        release_date: "1988",
+        rt_score: "93",
+      },
+      {
+        title: "My Neighbor Totoro",
+        director: "Hayao Miyazaki",
+        release_date: "1988",
+        rt_score: "93",
+      },
+      {
+        title: "Castle in the Sky",
+        director: "Hayao Miyazaki",
+        release_date: "1986",
+        rt_score: "95",
+      },
+    ];
+    expect(dataYearAsc(dataSampleGhibli)).toEqual(resultGhibliYear);
+  });
+});
 describe("Función que filtra peliculas por director", () => {
   it("Debería ser una funcion", () => {
     expect(typeof dataFilmsFilter).toBe("function");
   });
   it("Debería retornar el array con las películas filtradas por director", () => {
-    const resultGhibliFilter= [
+    const resultGhibliFilter = [
       {
         title: "My Neighbor Totoro",
         director: "Hayao Miyazaki",
