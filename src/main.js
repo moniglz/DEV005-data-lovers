@@ -5,6 +5,8 @@ import {
   dataFilmsSort,
   dataScoreAsc,
   dataScoreDesc,
+  dataYearAsc,
+  dataYearDesc,
 } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
@@ -37,7 +39,10 @@ order.addEventListener("change", () => {
     const dataScoreReverse = dataScoreAsc(dataFilms);
     createCards(dataScoreReverse);
   } else if (indexSelect === 5) {
-    const dataScoreReverse = dataScoreAsc(dataFilms);
+    const dataScoreReverse = dataYearDesc(dataFilms);
+    createCards(dataScoreReverse);
+  } else if (indexSelect === 6) {
+    const dataScoreReverse = dataYearAsc(dataFilms);
     createCards(dataScoreReverse);
   }
 });
@@ -108,8 +113,8 @@ search.addEventListener("keyup",)*/
 
 // mostrar menu mobile
 
-const btnMenu = document.querySelector(".logo-hamburger"),
-  menu = document.querySelector(".menu-mobile-items");
+// const btnMenu = document.querySelector(".logo-hamburger"),
+//   menu = document.querySelector(".menu-mobile-items");
 
 // btnMenu.addEventListener("click", () => {
 //   btnMenu.classList.toggle("is-active");
