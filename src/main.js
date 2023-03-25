@@ -7,6 +7,7 @@ import {
   dataScoreDesc,
   dataYearAsc,
   dataYearDesc,
+  dataMovie,
 } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
@@ -57,8 +58,6 @@ const uniqueDirectors = arrDirectors.filter((value, index) => {
   return arrDirectors.indexOf(value) === index;
 });
 
-
-
 //agregar opctions al select
 const filter = document.querySelector(".filterDirectors");
 uniqueDirectors.forEach((element) => {
@@ -99,12 +98,42 @@ function createCards(dataSort) {
   dataSort.forEach((element) => {
     const divCard = document.createElement("div");
     divCard.classList = "card";
+    // aqui agrego el dataset de tipo id
+    divCard.dataset.id = `${element.id}`;
     divCard.innerHTML = `
     <img src="${element.poster}">
     <span>${element.title}</span>
     <p>${element.release_date}</p>
     `;
     containerCards.appendChild(divCard);
+  });
+
+  //Modal con info
+
+  const movieInfo = document.querySelectorAll(".card");
+  const containerModal = document.querySelector(".container-modal");
+  movieInfo.forEach((element) => {
+    //se da click a la tarjeta
+    element.addEventListener("click", (e) => {
+      if (!e.target.classList.contains("card")) {
+        const movie = e.target.parentElement;
+        // obtengo el id
+        const idMovie = movie.dataset.id;
+        //  obtener solo la dataque corresponde al id
+        const arrMovie = dataMovie(dataFilms, idMovie);
+        console.log("El array que viene desde la funcion dataMovie", arrMovie);
+        console.log("Ingreso a ese array en su posicion 0 y obtengo la imagen:   ", arrMovie[0].poster);
+        console.log("Ingreso a ese array en su posicion 0 y obtengo titulo:    ", arrMovie[0].title);
+        console.log("Ingreso a ese array en su posicion 0 y obtengo descripcion:    ", arrMovie[0].description);
+        console.log("Ingreso a ese array en su posicion 0 y obtengo el año:    ", arrMovie[0].release_date);
+
+        containerModal.style.display = "block";
+      }
+    });
+    const closeModal = document.querySelector(".close-modal");
+    closeModal.addEventListener("click", () => {
+      containerModal.style.display = "none";
+    });
   });
 }
 
@@ -120,25 +149,3 @@ search.addEventListener("keyup",)*/
 //   btnMenu.classList.toggle("is-active");
 //   menu.classList.toggle("is-active");
 // });
-
-//Modal con info
-
-const movieInfo = document.querySelectorAll(".card");
-const containerModal = document.querySelector(".container-modal");
-movieInfo.forEach((element) => {
-  //se da click a la tarjeta
-  element.addEventListener("click", (e) => {
-    
-    if(!e.target.classList.contains("card")){
-      const movie = e.target.parentElement;
-      console.log(movie.firstChild)
-    }
-    containerModal.style.display = "block";
-    const posterImg = document.querySelector(".poster-img");
-    posterImg.src = `${element.poster}`;
-  });
-  const closeModal = document.querySelector(".close-modal");
-  closeModal.addEventListener("click", () => {
-    containerModal.style.display = "none";
-  })
-});

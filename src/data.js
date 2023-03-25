@@ -74,3 +74,12 @@ export function dataFilmsFilter(films, director) {
   const arrFilter = films.filter((el) => el.director === director);
   return arrFilter;
 }
+
+// obtener la información de la pelicula dependiendo el id
+
+export function dataMovie(films, id) {
+
+  const arrFilter = films.filter((el) => el.id === id);
+  return arrFilter;
+}
+
