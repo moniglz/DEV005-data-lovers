@@ -109,9 +109,13 @@ function createCards(dataSort) {
   });
 
   //Modal con info
-
   const movieInfo = document.querySelectorAll(".card");
   const containerModal = document.querySelector(".container-modal");
+  containerModal.innerHTML = `
+  <div class="cont-button">
+    <button class="close-modal">✕</button>
+  </div>
+  `;
   movieInfo.forEach((element) => {
     //se da click a la tarjeta
     element.addEventListener("click", (e) => {
@@ -121,12 +125,30 @@ function createCards(dataSort) {
         const idMovie = movie.dataset.id;
         //  obtener solo la dataque corresponde al id
         const arrMovie = dataMovie(dataFilms, idMovie);
-        console.log("El array que viene desde la funcion dataMovie", arrMovie);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo la imagen:   ", arrMovie[0].poster);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo titulo:    ", arrMovie[0].title);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo descripcion:    ", arrMovie[0].description);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo el año:    ", arrMovie[0].release_date);
-
+        // console.log("El array que viene desde la funcion dataMovie", arrMovie);
+        // console.log("Ingreso a ese array en su posicion 0 y obtengo la imagen:   ", arrMovie[0].poster);
+        // console.log("Ingreso a ese array en su posicion 0 y obtengo titulo:    ", arrMovie[0].title);
+        // console.log("Ingreso a ese array en su posicion 0 y obtengo descripcion:    ", arrMovie[0].description);
+        // console.log("Ingreso a ese array en su posicion 0 y obtengo el año:    ", arrMovie[0].release_date);
+        const modalMovie = document.createElement("section");
+        modalMovie.className = "modal";
+        modalMovie.setAttribute("id", "modal-movies");
+        modalMovie.dataset.id = `${arrMovie[0].id}`;
+        modalMovie.innerHTML = `
+        <div id="cont-modal-img">
+          <img src="${arrMovie[0].poster}" class="poster-img"
+          alt="'Poster film ' + '${arrMovie[0].title}'"/>
+        </div>
+        <div id="cont-modal-txt">
+          <h1>${arrMovie[0].title}</h1>
+          <h2>${(arrMovie[0].release_date)}</h2>
+          <h3>${arrMovie[0].director}</h3>
+          <p>${arrMovie[0].description}</p>
+          <h4>${arrMovie[0].rt_score}</h4>
+        </div>  
+        `;
+        console.log(modalMovie);
+        containerModal.appendChild(modalMovie);
         containerModal.style.display = "block";
       }
     });
