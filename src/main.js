@@ -8,6 +8,7 @@ import {
   dataYearAsc,
   dataYearDesc,
   dataMovie,
+  dataStats,
 } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
@@ -112,6 +113,9 @@ function createCards(dataSort) {
 
   const movieInfo = document.querySelectorAll(".card");
   const containerModal = document.querySelector(".container-modal");
+  const percentageF = document.querySelector(".percentages-F");
+  const percentageM = document.querySelector(".percentages-M");
+  const percentageO = document.querySelector(".percentages-O");
   movieInfo.forEach((element) => {
     //se da click a la tarjeta
     element.addEventListener("click", (e) => {
@@ -119,15 +123,20 @@ function createCards(dataSort) {
         const movie = e.target.parentElement;
         // obtengo el id
         const idMovie = movie.dataset.id;
-        //  obtener solo la dataque corresponde al id
+        //  obtener solo la data que corresponde al id
         const arrMovie = dataMovie(dataFilms, idMovie);
-        console.log("El array que viene desde la funcion dataMovie", arrMovie);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo la imagen:   ", arrMovie[0].poster);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo titulo:    ", arrMovie[0].title);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo descripcion:    ", arrMovie[0].description);
-        console.log("Ingreso a ese array en su posicion 0 y obtengo el año:    ", arrMovie[0].release_date);
 
-        containerModal.style.display = "block";
+        // guardamos el array de personas
+        const filmPeople = arrMovie[0].people;
+        // ejecutamos la funcion que hace las estadisticas
+        const objPercentajes = dataStats(filmPeople);
+        const { percentageFemale, percentageMale, percentageOther } =
+          objPercentajes;
+          // agregamos los resultados a cada elemento HTML
+        percentageF.innerHTML = `${percentageFemale}`;
+        percentageM.innerHTML = `${percentageMale}`;
+        percentageO.innerHTML = `${percentageOther}`;
+        containerModal.style.display = "flex";
       }
     });
     const closeModal = document.querySelector(".close-modal");
