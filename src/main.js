@@ -8,6 +8,7 @@ import {
   dataYearAsc,
   dataYearDesc,
   dataMovie,
+  dataStats,
 } from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
@@ -53,7 +54,6 @@ const arrDirectors = [];
 dataFilms.forEach((element) => {
   arrDirectors.push(element.director);
 });
-
 const uniqueDirectors = arrDirectors.filter((value, index) => {
   return arrDirectors.indexOf(value) === index;
 });
@@ -113,61 +113,63 @@ function createCards(dataSort) {
   const containerModal = document.querySelector(".container-modal");
   containerModal.innerHTML = `
   <div class="cont-button">
-    <button class="close-modal">✕</button>
+  <button class="close-modal">✕</button>
   </div>
+  <section class="modal" id="modal-movies"><section/>
   `;
   movieInfo.forEach((element) => {
-    //se da click a la tarjeta
+  //se da click a la tarjeta
     element.addEventListener("click", (e) => {
       if (!e.target.classList.contains("card")) {
         const movie = e.target.parentElement;
         // obtengo el id
         const idMovie = movie.dataset.id;
-        //  obtener solo la dataque corresponde al id
+        //  obtener solo la data que corresponde al id
         const arrMovie = dataMovie(dataFilms, idMovie);
-        // console.log("El array que viene desde la funcion dataMovie", arrMovie);
-        // console.log("Ingreso a ese array en su posicion 0 y obtengo la imagen:   ", arrMovie[0].poster);
-        // console.log("Ingreso a ese array en su posicion 0 y obtengo titulo:    ", arrMovie[0].title);
-        // console.log("Ingreso a ese array en su posicion 0 y obtengo descripcion:    ", arrMovie[0].description);
-        // console.log("Ingreso a ese array en su posicion 0 y obtengo el año:    ", arrMovie[0].release_date);
-        const modalMovie = document.createElement("section");
-        modalMovie.className = "modal";
-        modalMovie.setAttribute("id", "modal-movies");
+        const modalMovie = document.querySelector(".modal");
         modalMovie.dataset.id = `${arrMovie[0].id}`;
-        modalMovie.innerHTML = `
-        <div id="cont-modal-img">
-          <img src="${arrMovie[0].poster}" class="poster-img"
-          alt="'Poster film ' + '${arrMovie[0].title}'"/>
-        </div>
-        <div id="cont-modal-txt">
-          <h1>${arrMovie[0].title}</h1>
-          <h2>${(arrMovie[0].release_date)}</h2>
-          <h3>${arrMovie[0].director}</h3>
-          <p>${arrMovie[0].description}</p>
-          <h4>${arrMovie[0].rt_score}</h4>
-        </div>  
-        `;
+        // guardamos el array de personas
+        const filmPeople = arrMovie[0].people;
+        // ejecutamos la funcion que hace las estadisticas
+        const objPercentajes = dataStats(filmPeople);
+        const { percentageFemale, percentageMale, percentageOther } =
+        objPercentajes;
+        // agregamos los resultados a cada elemento HTML
+
+        modalMovie.innerHTML = `        
+      <div id="cont-modal-img">
+        <img src="${arrMovie[0].poster}" class="poster-img"
+        alt="'Poster film ' + '${arrMovie[0].title}'"/>
+      </div>
+      <div id="cont-modal-txt">
+        <h1 class="title-modal">${arrMovie[0].title}</h1>
+        <h2 class="subtitle-modal">${(arrMovie[0].release_date)}</h2>
+        <h3 class="subtitle-modal">${arrMovie[0].director}</h3>
+        <p class="description-modal">${arrMovie[0].description}</p>
+        <h4 class="rating-modal">${arrMovie[0].rt_score}</h4>
+        <span class="subtitle-modal">People:</span>
+        <span class="subtitle-modal">Percentage of female characters: 
+          <span class="percentages-F">${percentageFemale}</span> 
+        </span>
+        <span class="subtitle-modal">Percentage of male characters: 
+          <span class="percentages-M">${percentageMale}</span> 
+        </span>
+        <span class="subtitle-modal">Other characters: 
+          <span class="percentages-O">${percentageOther}</span> 
+        </span>
+      </div>  
+      `;
         console.log(modalMovie);
         containerModal.appendChild(modalMovie);
-        containerModal.style.display = "block";
+        containerModal.style.display = "flex";
       }
     });
     const closeModal = document.querySelector(".close-modal");
     closeModal.addEventListener("click", () => {
       containerModal.style.display = "none";
     });
-  });
+  })
 }
 
 /*const search = document.querySelectorAll("#search");
 search.addEventListener("keyup",)*/
-
-// mostrar menu mobile
-
-// const btnMenu = document.querySelector(".logo-hamburger"),
-//   menu = document.querySelector(".menu-mobile-items");
-
-// btnMenu.addEventListener("click", () => {
-//   btnMenu.classList.toggle("is-active");
-//   menu.classList.toggle("is-active");
-// });
