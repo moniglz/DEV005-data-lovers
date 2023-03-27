@@ -169,6 +169,12 @@ function createCards(dataSort) {
   })
 }
 
+window.addEventListener("click", (e) => {
+  const containerModal = document.querySelector(".container-modal");
+  if (e.target === containerModal) {
+    containerModal.style.display = "none";
+  }
+});
 /*const search = document.querySelectorAll("#search");
 search.addEventListener("keyup",)*/
 
