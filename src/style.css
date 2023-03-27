@@ -379,13 +379,14 @@ will-change: width;
   backdrop-filter: blur(6.57067px);
   background-size: contain;
   display: none;
+  
 }
 .modal {
   display: flex;
   max-width: 60%;
   min-width: 450px;
-  max-height: 70%;
-  min-height: auto;
+  max-height: 100%;
+  min-height: 400px;
   /* border: dashed #9786f8; */
   border-radius: 55px;
 }
@@ -423,8 +424,8 @@ will-change: width;
   width: 65%;
   max-height: 95%;
   margin: 12px 0;
-  padding-top: 2.2%;
-  padding-left: 1.5%;
+  padding-top: 2%;
+  padding-left: 1.7%;
   padding-right: 2%;
   padding-bottom: 2%;
   background-color: #ffffff;
@@ -432,33 +433,33 @@ will-change: width;
 }
 .title-modal {
   font-family: var(--f-principal);
-  font-size: 4em;
+  font-size: 3em;
   text-align: left;
 }
 .subtitle-modal, h4 {
   font-family: var(--f-titulos);
 }
 .subtitle-modal {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bolder;
   margin-bottom: 5px;
   padding-bottom: 1px;
 }
 .subtitle-modal, .rating-modal {
-  font-size: 1.7em;
+  font-size: 1.6em;
   font-weight: 800;
   margin-bottom: 5px;
 }
 .description-modal {
   font-family: var(--f-parrafos);
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 600;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 
-@media (min-width: 280px) and (max-width: 480px) {
+@media (min-width: 280px) and (max-width: 1180px) {
   .menu-mobile, .menu-mobile-items{
     display: flex;
   }
@@ -504,5 +505,35 @@ will-change: width;
   select {
     width: 100%;
     height: 35px;
+  }
+  .cont-button{
+    justify-content: center;
+  }
+  .container-modal {
+    width: 100vw;
+    height: 100vh;
+  }
+  .modal {
+      display: flex;
+      max-width: 90%;
+      min-width: 300px;
+      /* max-height: 70%; */
+      height: auto;
+      /* border: dashed #9786f8; */
+      border-radius: 55px;
+  }
+  #cont-modal-txt{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    border-radius: 55px;
+    padding: 5%;
+  }
+  .title-modal {
+    font-size: 3.6rem;
+    text-align: center;
+  }
+  #cont-modal-img{
+    display: none;
   }
 }

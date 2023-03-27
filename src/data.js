@@ -98,3 +98,4 @@ export function dataStats(filmPeople) {
   const percentageOther = `${Math.round((countOther * 100) / sumPeople)}%`;
   return {percentageFemale, percentageMale, percentageOther};
 }
+

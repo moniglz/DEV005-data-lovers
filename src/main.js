@@ -144,8 +144,7 @@ function createCards(dataSort) {
           <h2 class="subtitle-modal">${(arrMovie[0].release_date)}</h2>
           <h3 class="subtitle-modal">${arrMovie[0].director}</h3>
           <p class="description-modal">${arrMovie[0].description}</p>
-          <h4 class="rating-modal">${arrMovie[0].rt_score}</h4>
-          <span class="subtitle-modal">People:</span>
+          <h4 class="rating-modal">Score: ${arrMovie[0].rt_score}</h4>
           <span class="subtitle-modal">Percentage of female characters: 
             <span class="percentages-F">${percentageFemale}</span> 
           </span>
