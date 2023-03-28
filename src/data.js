@@ -48,7 +48,7 @@ export function dataScoreAsc(arr) {
   return arrResult;
 }
 //Ordenar de menor a mayor año
-export function dataYearDesc(arr) {
+export function dataYearAsc(arr) {
   const arrResult = arr.sort((a, b) => {
     if (parseInt(a.release_date) < parseInt(b.release_date)) {
       return -1;
@@ -58,7 +58,7 @@ export function dataYearDesc(arr) {
   return arrResult;
 }
 //Ordenar de mayor a menor puntuación(rating)
-export function dataYearAsc(arr) {
+export function dataYearDesc(arr) {
   const arrResult = arr.sort((a, b) => {
     if (parseInt(a.release_date) > parseInt(b.release_date)) {
       return -1;

@@ -71,11 +71,11 @@ const dataSamplePeople = [
   },
 ];
 
-describe("Función que ordena de A-Z", () => {
-  it("Debería ser una función", () => {
+describe("function that sorts films from A to Z", () => {
+  it("should be a function", () => {
     expect(typeof dataFilmsSort).toBe("function");
   });
-  it("Debería retornar el array ordenado de A-Z", () => {
+  it("should return an array ordered A to Z", () => {
     const resultGhibliAZ = [
       {
         id: "2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -116,11 +116,11 @@ describe("Función que ordena de A-Z", () => {
     expect(dataFilmsSort(dataSampleGhibli)).toEqual(resultGhibliAZ);
   });
 });
-describe("Función que ordena de Z-A", () => {
-  it("Debería ser una función", () => {
+describe("function that sorts films from Z to A", () => {
+  it("should be a function", () => {
     expect(typeof dataFilmsReverse).toBe("function");
   });
-  it("Debería retornar el array ordenado de Z-A", () => {
+  it("should return an array ordered Z to A", () => {
     const resultGhibliZA = [
       {
         id: "ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
@@ -161,11 +161,11 @@ describe("Función que ordena de Z-A", () => {
     expect(dataFilmsReverse(dataSampleGhibli)).toEqual(resultGhibliZA);
   });
 });
-describe("Función que ordena peliculas de mayor a menor puntuación(rating)", () => {
-  it("Debería se una funcion", () => {
+describe("function that sorts films by score from highest to lowest", () => {
+  it("should be a function", () => {
     expect(typeof dataScoreDesc).toBe("function");
   });
-  it("Debería retornar el array ordenado de 95-91", () => {
+  it("should return an array ordered 95-91", () => {
     const resultGhibliScore = [
       {
         id: "2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -206,11 +206,11 @@ describe("Función que ordena peliculas de mayor a menor puntuación(rating)", (
     expect(dataScoreDesc(dataSampleGhibli)).toEqual(resultGhibliScore);
   });
 });
-describe("Función que ordena peliculas de menor a mayor puntuación(rating)", () => {
-  it("Debería se una funcion", () => {
+describe("function that sorts films by score from lowest to highest", () => {
+  it("should be a function", () => {
     expect(typeof dataScoreAsc).toBe("function");
   });
-  it("Debería retornar el array ordenado de 91-95", () => {
+  it("should return an array ordered 91-95", () => {
     const resultGhibliSCore = [
       {
         id: "ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
@@ -251,57 +251,57 @@ describe("Función que ordena peliculas de menor a mayor puntuación(rating)", (
     expect(dataScoreAsc(dataSampleGhibli)).toEqual(resultGhibliSCore);
   });
 });
-describe("Función que ordena peliculas de menor a mayor año", () => {
-  it("Debería se una funcion", () => {
-    expect(typeof dataYearDesc).toBe("function");
-  });
-  it("Debería retornar el array ordenado de 1986-1997", () => {
-    const resultGhibliYear = [
-      {
-        id: "2baf70d1-42bb-4437-b551-e5fed5a87abe",
-        title: "Castle in the Sky",
-        director: "Hayao Miyazaki",
-        release_date: "1986",
-        rt_score: "95",
-      },
-      {
-        id: "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
-        title: "My Neighbor Totoro",
-        director: "Hayao Miyazaki",
-        release_date: "1988",
-        rt_score: "93",
-      },
-      {
-        id: "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
-        title: "My Neighbor Totoro",
-        director: "Hayao Miyazaki",
-        release_date: "1988",
-        rt_score: "93",
-      },
-      {
-        id: "ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
-        title: "Whisper of the Heart",
-        director: "Yoshifumi Kondō",
-        release_date: "1995",
-        rt_score: "91",
-      },
-      {
-        id: "0440483e-ca0e-4120-8c50-4c8cd9b965d6",
-        title: "Princess Mononoke",
-        director: "Hiroyuki Morita",
-        release_date: "1997",
-        rt_score: "92",
-      },
-    ];
-    expect(dataYearDesc(dataSampleGhibli)).toEqual(resultGhibliYear);
-  });
-});
-describe("Función que ordena peliculas de mayor a menor año", () => {
-  it("Debería se una funcion", () => {
+describe("function that sorts films by year in ascending order", () => {
+  it("should be a function", () => {
     expect(typeof dataYearAsc).toBe("function");
   });
-  it("Debería retornar el array ordenado de 1997-1986", () => {
-    const resultGhibliYear = [
+  it("should return an array ordered 1986-1997", () => {
+    const resultGhibliYearAsc = [
+      {
+        id: "2baf70d1-42bb-4437-b551-e5fed5a87abe",
+        title: "Castle in the Sky",
+        director: "Hayao Miyazaki",
+        release_date: "1986",
+        rt_score: "95",
+      },
+      {
+        id: "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+        title: "My Neighbor Totoro",
+        director: "Hayao Miyazaki",
+        release_date: "1988",
+        rt_score: "93",
+      },
+      {
+        id: "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+        title: "My Neighbor Totoro",
+        director: "Hayao Miyazaki",
+        release_date: "1988",
+        rt_score: "93",
+      },
+      {
+        id: "ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
+        title: "Whisper of the Heart",
+        director: "Yoshifumi Kondō",
+        release_date: "1995",
+        rt_score: "91",
+      },
+      {
+        id: "0440483e-ca0e-4120-8c50-4c8cd9b965d6",
+        title: "Princess Mononoke",
+        director: "Hiroyuki Morita",
+        release_date: "1997",
+        rt_score: "92",
+      },
+    ];
+    expect(dataYearAsc(dataSampleGhibli)).toEqual(resultGhibliYearAsc);
+  });
+});
+describe("function that sorts films by year in descending order", () => {
+  it("should be a function", () => {
+    expect(typeof dataYearDesc).toBe("function");
+  });
+  it("should return an array ordered 1997-1986", () => {
+    const resultGhibliYearDesc = [
       {
         id: "0440483e-ca0e-4120-8c50-4c8cd9b965d6",
         title: "Princess Mononoke",
@@ -338,14 +338,14 @@ describe("Función que ordena peliculas de mayor a menor año", () => {
         rt_score: "95",
       },
     ];
-    expect(dataYearAsc(dataSampleGhibli)).toEqual(resultGhibliYear);
+    expect(dataYearDesc(dataSampleGhibli)).toEqual(resultGhibliYearDesc);
   });
 });
-describe("Función que filtra peliculas por director", () => {
-  it("Debería ser una funcion", () => {
+describe("function that filters films by director", () => {
+  it("should be a function", () => {
     expect(typeof dataFilmsFilter).toBe("function");
   });
-  it("Debería retornar el array con las películas filtradas por director", () => {
+  it("should return an array with films filtered by director", () => {
     const resultGhibliFilter = [
       {
         id: "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
@@ -375,11 +375,11 @@ describe("Función que filtra peliculas por director", () => {
   });
 });
 
-describe("Función que filtra cada película por id", () => {
-  it("Debería ser una funcion", () => {
+describe("function that filters each film by id", () => {
+  it("should be a function", () => {
     expect(typeof dataMovie).toBe("function");
   });
-  it("Debería retornar un array con una sola película", () => {
+  it("should return an array with just one film", () => {
     const resultGhibliMovie = [
       {
         id: "ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
@@ -395,11 +395,11 @@ describe("Función que filtra cada película por id", () => {
   });
 });
 
-describe("Función que calcula el % de personaje Femeninos, Masculinos y Otros", () => {
-  it("Debería ser una funcion", () => {
+describe("function that calculates the % by gender", () => {
+  it("should be a function", () => {
     expect(typeof dataStats).toBe("function");
   });
-  it("Debería retornar un objeto con los porcentajes", () => {
+  it("should return an object with percentages by gender", () => {
     const resultGhibliPercentage = {
       percentageFemale: "60%",
       percentageMale: "40%",
