@@ -34,20 +34,25 @@ Además el contenido cuenta con:
 
 ## Prototipo de baja fidelidad
 
-![Prototipo de baja fidelidad](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Prototipo de baja fidelidad](./src/img/proto-baja.png)
 
-[Figma](https://trello.com/invite/b/Nko6slje/ATTI2f87e82cf3d754776db553f2d78cfd5cE981ADA3/data-lovers)
+[Figma](https://www.figma.com/file/6UAjZ4GLKTq3gBqbQjaNjy/Studio-Ghibli?node-id=25-2&t=ozAUbUNDg03At5SK-0)
 
 ## Prototipo de alta fidelidad
 
-![Prototipo de baja fidelidad](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Prototipo de alta fidelidad](./src/img/proto-alta.png)
 
 
-[Figma](https://trello.com/invite/b/Nko6slje/ATTI2f87e82cf3d754776db553f2d78cfd5cE981ADA3/data-lovers)
+[Figma](https://www.figma.com/file/6UAjZ4GLKTq3gBqbQjaNjy/Studio-Ghibli?node-id=0-1&t=ozAUbUNDg03At5SK-0)
 
 ## Link 
 URL: [Studio Ghibli](https://moniglz.github.io/DEV005-data-lovers/)
 ## Test de usabilidad
+
+**La imagen de fondo para la pantalla principal tenía un color muy intenso para la vista**
+
+### Solución: 
+- Cambiamos el fondo por uno más amigable a la vista.
 
 **Poder cerrar el modal dando click en otro espacio de la página**
 
@@ -66,121 +71,123 @@ URL: [Studio Ghibli](https://moniglz.github.io/DEV005-data-lovers/)
 - [@moniglz](https://github.com/moniglz)
 - [@ifdotcom](https://github.com/ifdotcom)
 
+
+
 ## Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
 
 ### HTML
 
-- [ ] **Uso de HTML semántico**
+- [X] **Uso de HTML semántico**
 
 ### CSS
 
-- [ ] **Uso de selectores de CSS**
+- [X] **Uso de selectores de CSS**
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+- [X] **Modelo de caja (box model): borde, margen, padding**
 
-- [ ] **Uso de flexbox en CSS**
+- [X] **Uso de flexbox en CSS**
 
 ### Web APIs
 
-- [ ] **Uso de selectores del DOM**
+- [X] **Uso de selectores del DOM**
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+- [X] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
-- [ ] **Manipulación dinámica del DOM**
+- [X] **Manipulación dinámica del DOM**
 ### JavaScript
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+- [X] **Diferenciar entre tipos de datos primitivos y no primitivos**
 
-- [ ] **Arrays (arreglos)**
+- [X] **Arrays (arreglos)**
 
-- [ ] **Objetos (key, value)**
+- [X] **Objetos (key, value)**
 
-- [ ] **Variables (declaración, asignación, ámbito)**
+- [X] **Variables (declaración, asignación, ámbito)**
 
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+- [X] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
+- [X] **Uso de bucles/ciclos (while, for, for..of)**
 
-- [ ] **Funciones (params, args, return)**
+- [X] **Funciones (params, args, return)**
 
-- [ ] **Pruebas unitarias (unit tests)**
+- [X] **Pruebas unitarias (unit tests)**
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
+- [X] **Módulos de ECMAScript (ES Modules)**
 
-- [ ] **Uso de linter (ESLINT)**
+- [X] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [X] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+- [X] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] **Git: Instalación y configuración**
+- [X] **Git: Instalación y configuración**
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [X] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [X] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [X] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+- [X] **GitHub: Despliegue con GitHub Pages**
 
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+- [X] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
 ### Centrado en el usuario
 
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
+- [X] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
 
 ### Diseño de producto
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+- [X] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
-- [ ] **Seguir los principios básicos de diseño visual**
+- [X] **Seguir los principios básicos de diseño visual**
 
 ### Investigación
 
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
+- [X] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
 
 ## Criterios de aceptación mínimos del proyecto
 
 Los criterios para considerar que has completado este proyecto son:
 
-- [ ] Definición del producto
+- [X] Definición del producto
 
-- [ ] Historias de usuario
+- [X] Historias de usuario
 
-- [ ] Diseño de la Interfaz de Usuario
+- [X] Diseño de la Interfaz de Usuario
 
-- [ ] Prototipo de baja fidelidad
+- [X] Prototipo de baja fidelidad
 
-- [ ] Prototipo de alta fidelidad
+- [X] Prototipo de alta fidelidad
 
-- [ ] Testeos de usabilidad
+- [X] Testeos de usabilidad
 
-- [ ] Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+- [X] Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-- [ ] Pruebas unitarias
+- [X] Pruebas unitarias
 
 ## Checklist
 
-* [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [X] Usa VanillaJS.
+* [X] Pasa linter (`npm run pretest`)
+* [X] Pasa tests (`npm test`)
+* [X] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [X] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [X] Incluye historias de usuario en `README.md`.
+* [X] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [X] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [X] Incluye link a Zeplin en `README.md`.
+* [X] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [X] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [X] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [X] UI: Permite filtrar data en base a una condición.
+* [X] UI: Es _responsive_.
