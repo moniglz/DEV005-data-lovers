@@ -27,8 +27,8 @@ const order = document.querySelector(".orderMovies");
 order.addEventListener("change", () => {
   const indexSelect = order.selectedIndex;
   if (indexSelect === 1) {
-    const dataOrdenada = dataFilmsSort(dataFilms);
-    createCards(dataOrdenada);
+    const dataOrdered = dataFilmsSort(dataFilms);
+    createCards(dataOrdered);
   } else if (indexSelect === 2) {
     const dataReverse = dataFilmsReverse(dataFilms);
     createCards(dataReverse);
@@ -39,10 +39,10 @@ order.addEventListener("change", () => {
     const dataScoreReverse = dataScoreAsc(dataFilms);
     createCards(dataScoreReverse);
   } else if (indexSelect === 5) {
-    const dataScoreReverse = dataYearDesc(dataFilms);
+    const dataScoreReverse = dataYearAsc(dataFilms);
     createCards(dataScoreReverse);
   } else if (indexSelect === 6) {
-    const dataScoreReverse = dataYearAsc(dataFilms);
+    const dataScoreReverse = dataYearDesc(dataFilms);
     createCards(dataScoreReverse);
   }
 });
