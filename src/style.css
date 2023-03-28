@@ -253,8 +253,8 @@ select {
 /* menu mobile */
 .menu-mobile {
   width: 100%;
-  height: 80px;
-  background: var(--color-movies);
+  height: 90px;
+  background: #014362bf;
   display: flex;
   justify-content: space-between;
 }
@@ -282,7 +282,7 @@ select {
   color: #e6ebea;
 }
 
-.menu-mobile-items {
+/* .menu-mobile-items {
   width: 100%;
   height: 50vh;
   position: absolute;
@@ -294,7 +294,7 @@ select {
 }
 .menu-mobile-items.is-active {
     transform: translate(0, 0);
-}
+} */
 
 .menu-items {
   display: flex;
@@ -318,7 +318,7 @@ height: 4px;
 position: absolute;
 top: 50px;
 right: 50%;
-transition: all .5s;
+transition: all .3s;
 will-change: width;
 }
 .people::after {
@@ -462,6 +462,7 @@ will-change: width;
 @media (min-width: 280px) and (max-width: 1180px) {
   .menu-mobile, .menu-mobile-items{
     display: flex;
+    justify-content: center;
   }
   main {
     height: 100vh;
@@ -486,6 +487,9 @@ will-change: width;
     background-size: cover;
     background-color: azure;
   }
+  .content-op{
+  gap: 35px;
+  }
   .container-pages{
     height: auto;
   }
@@ -494,10 +498,16 @@ will-change: width;
     justify-content: center;
   }
   .container-img {
-    width: 200px;
+    width: 300px;
     margin: 50px 0 0;
-    margin-top: 50px;
+       display: flex;
+    justify-content: center;
   }
+  .container-img > img {
+  
+  margin-left: 0%;
+ 
+}
   .cont-categories {
     width: 100%;
     margin: 30px;
@@ -506,7 +516,7 @@ will-change: width;
   #people,
   #location,
   #vehicles {
-    font-size: 1.8rem;
+    font-size: 3.6rem;
     margin: 30px 0;
     text-align: center;
     padding: 0;
