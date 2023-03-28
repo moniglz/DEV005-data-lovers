@@ -69,6 +69,7 @@ URL: [Studio Ghibli](https://moniglz.github.io/DEV005-data-lovers/)
 
 
 ## Objetivos de aprendizaje
+## Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
 
@@ -146,6 +147,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 - [X] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
 
+## Criterios de aceptación mínimos del proyecto
 ## Criterios de aceptación mínimos del proyecto
 
 Los criterios para considerar que has completado este proyecto son:
