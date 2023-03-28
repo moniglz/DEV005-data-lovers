@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="menu">
+    <div class="container">
+      <section class="container-img">
+        <img src="./img/studio-ghibli-logo.png" alt="image-studio-ghibli" />
+      </section>
+      <section class="cont-categories">
+        <div id="movies">
+          <span class="menu-item movies">Movies</span>
+        </div>
+        <!-- <div id="people">
+            <span class="menu-item people">Personajes</span>
+          </div>
+          <div id="location">
+            <span class="menu-item location">Lugares</span>
+          </div>
+          <div id="vehicles">
+            <span class="menu-item vehicles">Vehículos</span>
+          </div> -->
+      </section>
+    </div>
+  </main>
+
+  <!-- section for the movies -->
+  <section class="pages container-films">
+    <!-- mobile -->
+    <div class="menu-mobile">
+      <div class="logo-mobile">
+        <img src="./img/studio-ghibli-logo.png" alt="Logo de Studio Ghibli" />
+      </div>
+      <!-- <div class="logo-hamburger"><img src="./img/menu.png" alt="" /></div> -->
+    </div>
+    <!-- <div class="menu-mobile-items">
+        <ul class="menu-items">
+          <li><a class="menu-item movies" href="#">Películas</a></li>
+          <li><a class="menu-item people" href="#">Personajes</a></li>
+          <li><a class="menu-item location" href="#">Lugares</a></li>
+          <li><a class="menu-item vehicles" href="#">Vehículos</a></li>
+        </ul>
+      </div> -->
+    <section id="page-movies">
+      <div class="container-pages">
+        <div id="nav-bar">
+          <ul>
+            <li><a class="menu-item movies" href="">Movies</a></li>
+            <!-- <li><a class="menu-item people" href="">Personajes</a></li>
+                <li><a class="menu-item location" href="">Lugares</a></li>
+                <li><a class="menu-item vehicles" href=""> Vehículos</a></li> -->
+          </ul>
+        </div>
+
+        <div class="banner-logo">
+          <img src="./img/studio-ghibli-logo.png" alt="logo-studio-ghibli" />
+        </div>
+        <section class="search-filter">
+          <!-- <input type="search" class="search" id="search" /> -->
+          <select name="filter" class="orderMovies" id="f-movies">
+            <option selected value="ordenar">Sort by</option>
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+            <option value="max-rating">+ Score</option>
+            <option value="min-rating">- Score</option>
+            <option value="year">↑ Year</option>
+            <option value="year">↓ Year</option>
+          </select>
+          <select name="filter" class="filterDirectors">
+            <option selected value="ordenar">Filter by</option>
+          </select>
+        </section>
+
+        <section class="content-op" id="cont-movies"></section>
+      </div>
+
+      <!-- Modal with the movies info -->
+      <section class="container-modal">
+        <!-- <div class="cont-button">
+          <button class="close-modal">✕</button>
+        </div>
+        <section class="modal" id="modal-movies">
+          <div id="cont-modal-img">
+            <img class="poster-img"
+              src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg" />
+          </div>
+          <div id="cont-modal-txt">
+            <h1 class="title-modal">My Neighbor Totoro</h1>
+            <h2 class="subtitle-modal">(1988)</h2>
+            <h3 class="subtitle-modal">Director: Hayao Miyazaki</h3>
+            <p class="description-modal">
+              Two sisters move to the country with their father in order to be closer to their hospitalized mother,
+              and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest.
+              When the youngest runs away from home, the older sister seeks help from the spirits to find her.
+            </p>
+            <h4 class="rating-modal">Rating: 93</h4>
+            <span class="subtitle-modal">People:</span>
+            <span class="subtitle-modal">Percentage of female characters: <span class="percentages-F"></span> </span>
+            <span class="subtitle-modal">Percentage of male characters: <span class="percentages-M"></span> </span>
+            <span class="subtitle-modal">Other characters: <span class="percentages-O"></span> </span>
+          </div>
+        </section> -->
+      </section>
+
+    </section>
+  </section>
+
+<!-- section for the people -->
+
+  <!-- <section class="pages container-people">
+      <section id="page-people">
+        <div class="container-pages">
+          <div id="nav-bar-people">
+            <ul>
+              <li>Películas</li>
+              <li>Personajes</li>
+              <li>Lugares</li>
+              <li>Vehículos</li>
+            </ul>
+          </div>
+          <div class="banner-logo">
+            <img src="./img/studio-ghibli-logo.png" alt="logo-studio-ghibli" />
+          </div>
+          <section class="search-filter">
+            <input type="search" class="search" id="search-people" />
+            <select name="filter" class="filter" id="f-people">
+              <option value="name-a">A - Z</option>
+              <option value="name-z">Z - A</option>
+            </select>
+          </section>
+          
+          <section class="content-op" id="cont-people">
+            <div id="op1"></div>
+            <div id="op2"></div>
+            <div id="op3"></div>
+            <div id="op4"></div>
+          </section>
+        </div>
+      </section>
+    </section> -->
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
