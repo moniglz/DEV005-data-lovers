@@ -472,6 +472,23 @@ will-change: width;
   .banner-logo {
     display: none;
   }
+  .container-films {
+    height: 100vh;
+  }
+  #page-movies {
+    display: flex;
+    max-width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(./img/background-movies.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: azure;
+  }
+  .container-pages{
+    height: auto;
+  }
   .container {
     flex-direction: column;
     justify-content: center;
