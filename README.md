@@ -36,18 +36,23 @@ Además el contenido cuenta con:
 
 ![Prototipo de baja fidelidad](./src/img/proto-baja.png)
 
-[Figma](https://trello.com/invite/b/Nko6slje/ATTI2f87e82cf3d754776db553f2d78cfd5cE981ADA3/data-lovers)
+[Figma](https://www.figma.com/file/6UAjZ4GLKTq3gBqbQjaNjy/Studio-Ghibli?node-id=25-2&t=ozAUbUNDg03At5SK-0)
 
 ## Prototipo de alta fidelidad
 
 ![Prototipo de alta fidelidad](./src/img/proto-alta.png)
 
 
-[Figma](https://trello.com/invite/b/Nko6slje/ATTI2f87e82cf3d754776db553f2d78cfd5cE981ADA3/data-lovers)
+[Figma](https://www.figma.com/file/6UAjZ4GLKTq3gBqbQjaNjy/Studio-Ghibli?node-id=0-1&t=ozAUbUNDg03At5SK-0)
 
 ## Link 
 URL: [Studio Ghibli](https://moniglz.github.io/DEV005-data-lovers/)
 ## Test de usabilidad
+
+**La imagen de fondo para la pantalla principal tenía un color muy intenso para la vista**
+
+### Solución: 
+- Cambiamos el fondo por uno más amigable a la vista.
 
 **Poder cerrar el modal dando click en otro espacio de la página**
 
@@ -68,7 +73,6 @@ URL: [Studio Ghibli](https://moniglz.github.io/DEV005-data-lovers/)
 
 
 
-## Objetivos de aprendizaje
 ## Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
@@ -147,7 +151,6 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 - [X] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
 
-## Criterios de aceptación mínimos del proyecto
 ## Criterios de aceptación mínimos del proyecto
 
 Los criterios para considerar que has completado este proyecto son:
