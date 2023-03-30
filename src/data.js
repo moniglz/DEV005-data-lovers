@@ -1,9 +1,6 @@
 //Ordenar películas A - Z
 export function dataFilmsSort(arr) {
   const arrResult = arr.sort((a, b) => {
-    if (a.title < b.title) {
-      return -1;
-    }
     if (a.title > b.title) {
       return 1;
     }
@@ -15,9 +12,6 @@ export function dataFilmsSort(arr) {
 //Ordenar películas Z - A
 export function dataFilmsReverse(arr) {
   const arrResult = arr.sort((a, b) => {
-    // if (a.title < b.title) {
-    //   return 1;
-    // }
     if (a.title > b.title) {
       return -1;
     }
@@ -69,21 +63,18 @@ export function dataYearDesc(arr) {
 }
 
 // Filtrar peliulas por director
-
 export function dataFilmsFilter(films, director) {
   const arrFilter = films.filter((el) => el.director === director);
   return arrFilter;
 }
 
 // obtener la información de la pelicula dependiendo el id
-
 export function dataMovie(films, id) {
   const arrFilter = films.filter((el) => el.id === id);
   return arrFilter;
 }
 
 // stats
-
 export function dataStats(filmPeople) {
   const arrFemale = filmPeople.filter((el) => el.gender === "Female");
   const arrMale = filmPeople.filter((el) => el.gender === "Male");
@@ -98,4 +89,3 @@ export function dataStats(filmPeople) {
   const percentageOther = `${Math.round((countOther * 100) / sumPeople)}%`;
   return {percentageFemale, percentageMale, percentageOther};
 }
-

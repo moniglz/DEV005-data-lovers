@@ -270,31 +270,6 @@ select {
   height: 68px;
 }
 
-.logo-hamburger {
-  height: 100%;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo-hamburger > img {
-  width: 40px;
-  color: #e6ebea;
-}
-
-/* .menu-mobile-items {
-  width: 100%;
-  height: 50vh;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #566daedc;
-  transform: translate(0, -130%);
-}
-.menu-mobile-items.is-active {
-    transform: translate(0, 0);
-} */
 
 .menu-items {
   display: flex;
@@ -321,7 +296,7 @@ right: 50%;
 transition: all .3s;
 will-change: width;
 }
-.people::after {
+/* .people::after {
   content: "";
 background-color: var(--color-people);
 width: 0;
@@ -353,7 +328,7 @@ top: 50px;
 right: 50%;
 transition: all .5s;
 will-change: width;
-}
+} */
 
 .menu-item:hover::after{
   width: 100%;
