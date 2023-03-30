@@ -4,9 +4,6 @@ export function dataFilmsSort(arr) {
     if (a.title < b.title) {
       return -1;
     }
-    if (a.title > b.title) {
-      return 1;
-    }
     return 0;
   });
   return arrResult;
@@ -15,9 +12,6 @@ export function dataFilmsSort(arr) {
 //Ordenar películas Z - A
 export function dataFilmsReverse(arr) {
   const arrResult = arr.sort((a, b) => {
-    // if (a.title < b.title) {
-    //   return 1;
-    // }
     if (a.title > b.title) {
       return -1;
     }

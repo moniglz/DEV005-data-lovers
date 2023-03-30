@@ -1,4 +1,3 @@
-//import { getFilms, getPeople } from "./data.js";
 import {
   dataFilmsFilter,
   dataFilmsReverse,
@@ -174,13 +173,3 @@ window.addEventListener("click", (e) => {
     containerModal.style.display = "none";
   }
 });
-/*const search = document.querySelectorAll("#search");
-search.addEventListener("keyup",)*/
-
-// mostrar menu mobile
-// const btnMenu = document.querySelector(".logo-hamburger"),
-//   menu = document.querySelector(".menu-mobile-items");
-// btnMenu.addEventListener("click", () => {
-//   btnMenu.classList.toggle("is-active");
-//   menu.classList.toggle("is-active");
-// });
